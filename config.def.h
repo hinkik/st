@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=12:antialias=true:autohint=true";
+static char *font = "monospace:pixelsize=14:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -179,10 +179,10 @@ static uint forcemousemod = ShiftMask;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
-	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+	/*{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },*/
+	/*{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },*/
+	/*{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },*/
+	/*{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },*/
 };
 
 /* Internal keyboard shortcuts. */
@@ -198,13 +198,13 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
-	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
+	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
+	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ Mod1Mask,             XK_k,           kscrollup,      {.i = -1} },
-	{ Mod1Mask,             XK_j,           kscrolldown,    {.i = -1} },
+	{ MODKEY,               XK_k,           kscrollup,      {.i =  1} },
+	{ MODKEY,               XK_j,           kscrolldown,    {.i =  1} },
 };
 
 /*
