@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "monospace:pixelsize=14:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 14;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -121,9 +121,9 @@ static const char *colorname[] = {
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
+	"black",
 	"#cccccc",
 	"#555555",
-	"black",
 };
 
 
