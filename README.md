@@ -5,6 +5,6 @@
 This is my fork of Suckless' terminal emulator, ST.
 
 ## Patches
-- alpha,
+- alpha (proper, cred: @sineemore),
 - newterm,
 - scroll
